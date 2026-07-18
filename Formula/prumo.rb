@@ -4,17 +4,16 @@ class Prumo < Formula
   # Pin by git tag + commit: GitHub's on-demand archive tarballs changed hash
   # after the release tag was recreated by CI, so a sha256 pin is unreliable here.
   url "https://github.com/wolffness/prumo.git",
-      tag:      "v2026.7.1-prumo1",
-      revision: "b9d5e0efc2453dbf0b951c855ebde9f5128798a8"
-  version "2026.7.1-prumo1"
+      tag:      "v2026.7.1-prumo2",
+      revision: "7e348b3b22bbd292975059085cb4473ae1e32cf5"
+  version "2026.7.1-prumo2"
   license "MIT"
 
   depends_on "rust" => :build
 
   def install
+    # The crate builds both the prumo and the upstream tuxedo binary.
     system "cargo", "install", *std_cargo_args
-    # The crate keeps the upstream name (tuxedo); the installed command is prumo.
-    mv bin/"tuxedo", bin/"prumo"
   end
 
   test do

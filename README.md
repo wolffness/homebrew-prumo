@@ -4,6 +4,7 @@ Tap do Homebrew para o [Prumo](https://github.com/wolffness/prumo).
 
 ```sh
 brew tap wolffness/prumo
+brew trust wolffness/prumo   # tap pessoal — confirmação única
 brew install prumo
 ```
 

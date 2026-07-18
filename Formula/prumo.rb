@@ -12,8 +12,9 @@ class Prumo < Formula
   depends_on "rust" => :build
 
   def install
-    # The crate builds both the prumo and the upstream tuxedo binary.
-    system "cargo", "install", *std_cargo_args
+    # The crate also builds the upstream tuxedo binary; ship only prumo so
+    # the keg never collides with a standalone tuxedo install.
+    system "cargo", "install", "--bin", "prumo", *std_cargo_args
   end
 
   test do

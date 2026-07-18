@@ -1,5 +1,5 @@
 class Prumo < Formula
-  desc "App de tarefas todo.txt para te manter no prumo — TUI + CLI, pt-BR, feito para cérebros TDAH/TEA"
+  desc "App de tarefas todo.txt em pt-BR para te manter no prumo (TUI + CLI)"
   homepage "https://github.com/wolffness/prumo"
   # Pin by git tag + commit: GitHub's on-demand archive tarballs changed hash
   # after the release tag was recreated by CI, so a sha256 pin is unreliable here.
@@ -12,9 +12,9 @@ class Prumo < Formula
   depends_on "rust" => :build
 
   def install
-    system "cargo", "build", "--release", "--locked"
+    system "cargo", "install", *std_cargo_args
     # The crate keeps the upstream name (tuxedo); the installed command is prumo.
-    bin.install "target/release/tuxedo" => "prumo"
+    mv bin/"tuxedo", bin/"prumo"
   end
 
   test do

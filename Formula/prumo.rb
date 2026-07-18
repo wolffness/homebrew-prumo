@@ -2,7 +2,7 @@ class Prumo < Formula
   desc "App de tarefas todo.txt para te manter no prumo — TUI + CLI, pt-BR, feito para cérebros TDAH/TEA"
   homepage "https://github.com/wolffness/prumo"
   url "https://github.com/wolffness/prumo/archive/refs/tags/v2026.7.1-prumo1.tar.gz"
-  sha256 "eb9dcb9d7752a195856c7173ec612ba32d1518c64bb9b468051c88ce3d2b42fd"
+  sha256 "4a8e2fa6f4a773021bf2cf8b917f92ca0a532d1493156c0384b5788823516e01"
   license "MIT"
 
   depends_on "rust" => :build

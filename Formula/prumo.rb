@@ -1,8 +1,12 @@
 class Prumo < Formula
   desc "App de tarefas todo.txt para te manter no prumo — TUI + CLI, pt-BR, feito para cérebros TDAH/TEA"
   homepage "https://github.com/wolffness/prumo"
-  url "https://github.com/wolffness/prumo/archive/refs/tags/v2026.7.1-prumo1.tar.gz"
-  sha256 "4a8e2fa6f4a773021bf2cf8b917f92ca0a532d1493156c0384b5788823516e01"
+  # Pin by git tag + commit: GitHub's on-demand archive tarballs changed hash
+  # after the release tag was recreated by CI, so a sha256 pin is unreliable here.
+  url "https://github.com/wolffness/prumo.git",
+      tag:      "v2026.7.1-prumo1",
+      revision: "b9d5e0efc2453dbf0b951c855ebde9f5128798a8"
+  version "2026.7.1-prumo1"
   license "MIT"
 
   depends_on "rust" => :build

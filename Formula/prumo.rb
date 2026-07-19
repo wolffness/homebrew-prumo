@@ -4,9 +4,9 @@ class Prumo < Formula
   # Pin by git tag + commit: GitHub's on-demand archive tarballs changed hash
   # after the release tag was recreated by CI, so a sha256 pin is unreliable here.
   url "https://github.com/wolffness/prumo.git",
-      tag:      "v2026.7.1-prumo3",
-      revision: "7398fb2b5c24717983b4211d4f29ce444f3d86aa"
-  version "2026.7.1-prumo3"
+      tag:      "v2026.7.1-prumo4",
+      revision: "624e74f281a1682c85c4084bff02fbd443ecd70e"
+  version "2026.7.1-prumo4"
   license "MIT"
 
   depends_on "rust" => :build
